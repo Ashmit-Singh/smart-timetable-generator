@@ -4,3 +4,6 @@ numpy==1.26.4
 pydantic==2.9.0
 python-multipart==0.0.9
 lxml==5.3.0
+streamlit
+pandas
+altair
