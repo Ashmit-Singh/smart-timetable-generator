@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem name="mary-fal-spr" nrDays="6" slotsPerDay="288" nrWeeks="13">
+
+  <!-- Optimization -->
+  <optimization time="1" room="1" distribution="1" student="1"/>
+
+  <rooms>
+    <room id="MAIN1" capacity="200">
+      <travel room="MAIN2" value="2"/>
+      <travel room="R401" value="1"/>
+      <travel room="R402" value="10"/>
+      <travel room="R403" value="10"/>
+      <travel room="R404" value="5"/>
+      <travel room="SEM1" value="1"/>
+    </room>
+    <room id="MAIN2" capacity="120">
+      <travel room="MAIN1" value="10"/>
+      <travel room="R402" value="10"/>
+      <travel room="R404" value="2"/>
+      <travel room="SEM1" value="1"/>
+    </room>
+    <room id="R401" capacity="80">
+      <travel room="MAIN1" value="2"/>
+      <travel room="R402" value="1"/>
+      <travel room="SEM1" value="1"/>
+      <travel room="SEM2" value="5"/>
+    </room>
+    <room id="R402" capacity="60">
+      <travel room="MAIN1" value="2"/>
+      <travel room="MAIN2" value="10"/>
+      <travel room="R401" value="1"/>
+      <travel room="R404" value="10"/>
+      <travel room="SEM1" value="1"/>
+    </room>
+    <room id="R403" capacity="50">
+      <travel room="MAIN1" value="5"/>
+      <travel room="MAIN2" value="2"/>
+      <travel room="R401" value="10"/>
+      <travel room="R404" value="1"/>
+      <travel room="SEM2" value="5"/>
+    </room>
+    <room id="R404" capacity="40">
+      <travel room="MAIN1" value="2"/>
+      <travel room="MAIN2" value="2"/>
+      <travel room="R403" value="10"/>
+      <travel room="SEM1" value="2"/>
+      <travel room="SEM2" value="2"/>
+    </room>
+    <room id="SEM1" capacity="30">
+      <travel room="MAIN1" value="10"/>
+      <travel room="MAIN2" value="2"/>
+      <travel room="R401" value="5"/>
+      <travel room="R402" value="10"/>
+      <travel room="R404" value="2"/>
+      <travel room="SEM2" value="1"/>
+    </room>
+    <room id="SEM2" capacity="25">
+      <travel room="MAIN2" value="5"/>
+      <travel room="R401" value="5"/>
+      <travel room="R402" value="2"/>
+      <travel room="SEM1" value="5"/>
+    </room>
+  </rooms>
+
+  <courses>
+    <course id="c0">  <!-- Medicine I -->
+      <config id="cfg0_0">
+        <subpart id="sp0_0">
+          <class id="cl0" limit="36">
+            <time days="100001" start="120" length="12" weeks="1111111111111" penalty="0"/>
+            <time days="100000" start="228" length="12" weeks="1111111111111" penalty="0"/>
+            <time days="111000" start="228" length="12" weeks="1111111111111" penalty="0"/>
+            <time days="010001" start="216" length="12" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="1"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="4"/>
+            <room id="R403" penalty="4"/>
+            <room id="R404" penalty="4"/>
+          </class>
+        </subpart>
+        <subpart id="sp0_1">
+          <class id="cl1" limit="28">
+            <time days="001000" start="108" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="110100" start="96" length="24" weeks="1111111111111" penalty="2"/>
+            <time days="010101" start="132" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="000100" start="120" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="110100" start="228" length="24" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="4"/>
+            <room id="R403" penalty="4"/>
+            <room id="R404" penalty="1"/>
+            <room id="SEM1" penalty="2"/>
+          </class>
+        </subpart>
+        <subpart id="sp0_2">
+          <class id="cl2" limit="56">
+            <time days="010100" start="132" length="18" weeks="1111111111111" penalty="2"/>
+            <time days="100011" start="120" length="18" weeks="1111111111111" penalty="4"/>
+            <time days="001100" start="132" length="18" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="2"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="2"/>
+            <room id="R402" penalty="1"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c1">  <!-- Medicine II -->
+      <config id="cfg1_0">
+        <subpart id="sp1_0">
+          <class id="cl3" limit="104">
+            <time days="000010" start="120" length="24" weeks="1111111111111" penalty="2"/>
+            <time days="001010" start="108" length="24" weeks="1111111111111" penalty="8"/>
+            <time days="010100" start="204" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="010011" start="144" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="010000" start="216" length="24" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="0"/>
+          </class>
+        </subpart>
+        <subpart id="sp1_1">
+          <class id="cl4" limit="94">
+            <time days="000011" start="216" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="000011" start="120" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="110100" start="144" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="011100" start="204" length="18" weeks="1111111111111" penalty="8"/>
+            <room id="MAIN1" penalty="1"/>
+            <room id="MAIN2" penalty="0"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c2">  <!-- Anatomy -->
+      <config id="cfg2_0">
+        <subpart id="sp2_0">
+          <class id="cl5" limit="72">
+            <time days="001001" start="108" length="12" weeks="1111111111111" penalty="1"/>
+            <time days="010010" start="180" length="12" weeks="1111111111111" penalty="4"/>
+            <time days="100101" start="108" length="12" weeks="1111111111111" penalty="0"/>
+            <time days="000110" start="192" length="12" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="1"/>
+            <room id="R401" penalty="4"/>
+          </class>
+        </subpart>
+        <subpart id="sp2_1">
+          <class id="cl6" limit="75">
+            <time days="100011" start="168" length="24" weeks="1111111111111" penalty="8"/>
+            <time days="010001" start="192" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="011000" start="144" length="24" weeks="1111111111111" penalty="1"/>
+            <time days="000001" start="108" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001000" start="156" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="001101" start="108" length="24" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="4"/>
+            <room id="MAIN2" penalty="1"/>
+            <room id="R401" penalty="2"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c3">  <!-- Physiology -->
+      <config id="cfg3_0">
+        <subpart id="sp3_0">
+          <class id="cl7" limit="72">
+            <time days="100100" start="156" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="000100" start="156" length="18" weeks="1111111111111" penalty="2"/>
+            <time days="000001" start="180" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="010001" start="216" length="18" weeks="1111111111111" penalty="4"/>
+            <time days="000101" start="156" length="18" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="4"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="1"/>
+          </class>
+        </subpart>
+        <subpart id="sp3_1">
+          <class id="cl8" limit="85">
+            <time days="001101" start="132" length="18" weeks="1111111111111" penalty="1"/>
+            <time days="000010" start="216" length="18" weeks="1111111111111" penalty="1"/>
+            <time days="010101" start="144" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="001100" start="132" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="100100" start="192" length="18" weeks="1111111111111" penalty="4"/>
+            <time days="001100" start="216" length="18" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="2"/>
+            <room id="MAIN2" penalty="0"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c4">  <!-- Biochemistry -->
+      <config id="cfg4_0">
+        <subpart id="sp4_0">
+          <class id="cl9" limit="52">
+            <time days="110001" start="120" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001010" start="132" length="24" weeks="1111111111111" penalty="8"/>
+            <time days="000001" start="180" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="010000" start="96" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="010000" start="216" length="24" weeks="1111111111111" penalty="2"/>
+            <time days="010001" start="228" length="24" weeks="1111111111111" penalty="2"/>
+            <room id="MAIN1" penalty="1"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="0"/>
+          </class>
+        </subpart>
+        <subpart id="sp4_1">
+          <class id="cl10" limit="27">
+            <time days="001000" start="120" length="12" weeks="1111111111111" penalty="1"/>
+            <time days="001110" start="144" length="12" weeks="1111111111111" penalty="1"/>
+            <time days="010000" start="132" length="12" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="4"/>
+            <room id="MAIN2" penalty="4"/>
+            <room id="R401" penalty="1"/>
+            <room id="R402" penalty="2"/>
+            <room id="R403" penalty="4"/>
+            <room id="R404" penalty="0"/>
+            <room id="SEM1" penalty="0"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c5">  <!-- Pathology -->
+      <config id="cfg5_0">
+        <subpart id="sp5_0">
+          <class id="cl11" limit="81">
+            <time days="011000" start="180" length="12" weeks="1111111111111" penalty="8"/>
+            <time days="010110" start="120" length="12" weeks="1111111111111" penalty="4"/>
+            <time days="000011" start="96" length="12" weeks="1111111111111" penalty="2"/>
+            <time days="010000" start="108" length="12" weeks="1111111111111" penalty="1"/>
+            <time days="100000" start="180" length="12" weeks="1111111111111" penalty="0"/>
+            <time days="010000" start="120" length="12" weeks="1111111111111" penalty="2"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="1"/>
+          </class>
+        </subpart>
+        <subpart id="sp5_1">
+          <class id="cl12" limit="54">
+            <time days="010110" start="108" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="110001" start="96" length="24" weeks="1111111111111" penalty="1"/>
+            <time days="100110" start="180" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001011" start="144" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001110" start="144" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="110000" start="180" length="24" weeks="1111111111111" penalty="2"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="4"/>
+            <room id="R402" penalty="2"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c6">  <!-- Pharmacology -->
+      <config id="cfg6_0">
+        <subpart id="sp6_0">
+          <class id="cl13" limit="68">
+            <time days="000111" start="120" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="101010" start="228" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="110001" start="204" length="24" weeks="1111111111111" penalty="8"/>
+            <time days="100001" start="168" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001100" start="180" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="000101" start="168" length="24" weeks="1111111111111" penalty="1"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="1"/>
+          </class>
+        </subpart>
+        <subpart id="sp6_1">
+          <class id="cl14" limit="16">
+            <time days="011010" start="168" length="18" weeks="1111111111111" penalty="4"/>
+            <time days="100000" start="204" length="18" weeks="1111111111111" penalty="2"/>
+            <time days="001010" start="156" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="001101" start="192" length="18" weeks="1111111111111" penalty="1"/>
+            <time days="000001" start="228" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="101000" start="144" length="18" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="2"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="0"/>
+            <room id="R403" penalty="4"/>
+            <room id="R404" penalty="0"/>
+            <room id="SEM1" penalty="4"/>
+            <room id="SEM2" penalty="0"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c7">  <!-- Microbiology -->
+      <config id="cfg7_0">
+        <subpart id="sp7_0">
+          <class id="cl15" limit="58">
+            <time days="001010" start="132" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="000011" start="144" length="24" weeks="1111111111111" penalty="2"/>
+            <time days="011000" start="168" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001101" start="144" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="101010" start="120" length="24" weeks="1111111111111" penalty="4"/>
+            <room id="MAIN1" penalty="1"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="4"/>
+          </class>
+        </subpart>
+        <subpart id="sp7_1">
+          <class id="cl16" limit="19">
+            <time days="011100" start="204" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="000100" start="132" length="24" weeks="1111111111111" penalty="8"/>
+            <time days="001101" start="192" length="24" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="2"/>
+            <room id="R403" penalty="1"/>
+            <room id="R404" penalty="2"/>
+            <room id="SEM1" penalty="2"/>
+            <room id="SEM2" penalty="1"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c8">  <!-- Surgery -->
+      <config id="cfg8_0">
+        <subpart id="sp8_0">
+          <class id="cl17" limit="64">
+            <time days="000111" start="132" length="24" weeks="1111111111111" penalty="2"/>
+            <time days="000100" start="180" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="011000" start="192" length="24" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="2"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="1"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c9">  <!-- Pediatrics -->
+      <config id="cfg9_0">
+        <subpart id="sp9_0">
+          <class id="cl18" limit="61">
+            <time days="010000" start="96" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001001" start="156" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="011100" start="192" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="000100" start="120" length="24" weeks="1111111111111" penalty="0"/>
+            <time days="001000" start="96" length="24" weeks="1111111111111" penalty="4"/>
+            <time days="110001" start="144" length="24" weeks="1111111111111" penalty="1"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="4"/>
+            <room id="R401" penalty="0"/>
+          </class>
+        </subpart>
+        <subpart id="sp9_1">
+          <class id="cl19" limit="58">
+            <time days="010000" start="96" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="001011" start="228" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="010010" start="132" length="18" weeks="1111111111111" penalty="0"/>
+            <room id="MAIN1" penalty="4"/>
+            <room id="MAIN2" penalty="0"/>
+            <room id="R401" penalty="0"/>
+            <room id="R402" penalty="1"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+    <course id="c10">  <!-- Obstetrics -->
+      <config id="cfg10_0">
+        <subpart id="sp10_0">
+          <class id="cl20" limit="15">
+            <time days="000101" start="216" length="18" weeks="1111111111111" penalty="8"/>
+            <time days="000010" start="144" length="18" weeks="1111111111111" penalty="4"/>
+            <time days="011001" start="120" length="18" weeks="1111111111111" penalty="0"/>
+            <time days="100100" start="144" length="18" weeks="1111111111111" penalty="8"/>
+            <time days="000011" start="108" length="18" weeks="1111111111111" penalty="8"/>
+            <room id="MAIN1" penalty="0"/>
+            <room id="MAIN2" penalty="1"/>
+            <room id="R401" penalty="1"/>
+            <room id="R402" penalty="1"/>
+            <room id="R403" penalty="0"/>
+            <room id="R404" penalty="0"/>
+            <room id="SEM1" penalty="2"/>
+            <room id="SEM2" penalty="1"/>
+          </class>
+        </subpart>
+      </config>
+    </course>
+  </courses>
+
+  <distributions>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl0"/>
+      <class id="cl1"/>
+      <class id="cl2"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl3"/>
+      <class id="cl4"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl5"/>
+      <class id="cl6"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl7"/>
+      <class id="cl8"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl9"/>
+      <class id="cl10"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl11"/>
+      <class id="cl12"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl13"/>
+      <class id="cl14"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl15"/>
+      <class id="cl16"/>
+    </distribution>
+    <distribution type="NotOverlap" required="true" penalty="0">
+      <class id="cl18"/>
+      <class id="cl19"/>
+    </distribution>
+    <distribution type="SameTime" required="false" penalty="8">
+      <class id="cl3"/>
+      <class id="cl16"/>
+    </distribution>
+    <distribution type="DifferentTime" required="false" penalty="2">
+      <class id="cl2"/>
+      <class id="cl18"/>
+    </distribution>
+    <distribution type="DifferentTime" required="false" penalty="1">
+      <class id="cl1"/>
+      <class id="cl19"/>
+    </distribution>
+    <distribution type="SameDays" required="false" penalty="3">
+      <class id="cl8"/>
+      <class id="cl6"/>
+    </distribution>
+    <distribution type="DifferentTime" required="false" penalty="2">
+      <class id="cl18"/>
+      <class id="cl7"/>
+    </distribution>
+    <distribution type="SameDays" required="false" penalty="1">
+      <class id="cl2"/>
+      <class id="cl1"/>
+    </distribution>
+    <distribution type="SameTime" required="false" penalty="3">
+      <class id="cl0"/>
+      <class id="cl11"/>
+    </distribution>
+  </distributions>
+
+  <students>
+    <student id="s0">
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c3"/>
+    </student>
+    <student id="s1">
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c0"/>
+    </student>
+    <student id="s2">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c6"/>
+    </student>
+    <student id="s3">
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s4">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c3"/>
+    </student>
+    <student id="s5">
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c0"/>
+    </student>
+    <student id="s6">
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s7">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s8">
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c1"/>
+    </student>
+    <student id="s9">
+      <course id="c7"/>
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c9"/>
+    </student>
+    <student id="s10">
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c2"/>
+    </student>
+    <student id="s11">
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c8"/>
+    </student>
+    <student id="s12">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c6"/>
+    </student>
+    <student id="s13">
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c8"/>
+      <course id="c2"/>
+    </student>
+    <student id="s14">
+      <course id="c3"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c7"/>
+    </student>
+    <student id="s15">
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s16">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c6"/>
+    </student>
+    <student id="s17">
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c8"/>
+    </student>
+    <student id="s18">
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c0"/>
+    </student>
+    <student id="s19">
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c1"/>
+    </student>
+    <student id="s20">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s21">
+      <course id="c1"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c0"/>
+    </student>
+    <student id="s22">
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c1"/>
+    </student>
+    <student id="s23">
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c4"/>
+    </student>
+    <student id="s24">
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c5"/>
+    </student>
+    <student id="s25">
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c1"/>
+    </student>
+    <student id="s26">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c9"/>
+    </student>
+    <student id="s27">
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c5"/>
+    </student>
+    <student id="s28">
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c5"/>
+    </student>
+    <student id="s29">
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c8"/>
+    </student>
+    <student id="s30">
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c0"/>
+      <course id="c1"/>
+    </student>
+    <student id="s31">
+      <course id="c7"/>
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c9"/>
+    </student>
+    <student id="s32">
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c3"/>
+    </student>
+    <student id="s33">
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c5"/>
+    </student>
+    <student id="s34">
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s35">
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c2"/>
+      <course id="c5"/>
+    </student>
+    <student id="s36">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c7"/>
+    </student>
+    <student id="s37">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c5"/>
+    </student>
+    <student id="s38">
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c1"/>
+    </student>
+    <student id="s39">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c6"/>
+    </student>
+    <student id="s40">
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c3"/>
+      <course id="c10"/>
+    </student>
+    <student id="s41">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c4"/>
+    </student>
+    <student id="s42">
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c9"/>
+    </student>
+    <student id="s43">
+      <course id="c9"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c10"/>
+    </student>
+    <student id="s44">
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c4"/>
+    </student>
+    <student id="s45">
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c1"/>
+    </student>
+    <student id="s46">
+      <course id="c5"/>
+      <course id="c10"/>
+      <course id="c7"/>
+    </student>
+    <student id="s47">
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c0"/>
+    </student>
+    <student id="s48">
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c9"/>
+    </student>
+    <student id="s49">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c0"/>
+    </student>
+    <student id="s50">
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c6"/>
+    </student>
+    <student id="s51">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c2"/>
+    </student>
+    <student id="s52">
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c1"/>
+      <course id="c7"/>
+    </student>
+    <student id="s53">
+      <course id="c5"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c8"/>
+    </student>
+    <student id="s54">
+      <course id="c10"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c1"/>
+    </student>
+    <student id="s55">
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c4"/>
+    </student>
+    <student id="s56">
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c2"/>
+    </student>
+    <student id="s57">
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c1"/>
+    </student>
+    <student id="s58">
+      <course id="c1"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c0"/>
+    </student>
+    <student id="s59">
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c9"/>
+    </student>
+    <student id="s60">
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c9"/>
+    </student>
+    <student id="s61">
+      <course id="c0"/>
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c9"/>
+    </student>
+    <student id="s62">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s63">
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c4"/>
+    </student>
+    <student id="s64">
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c9"/>
+    </student>
+    <student id="s65">
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c5"/>
+    </student>
+    <student id="s66">
+      <course id="c7"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c1"/>
+    </student>
+    <student id="s67">
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c3"/>
+    </student>
+    <student id="s68">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c8"/>
+      <course id="c7"/>
+    </student>
+    <student id="s69">
+      <course id="c3"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c1"/>
+    </student>
+    <student id="s70">
+      <course id="c4"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s71">
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c0"/>
+    </student>
+    <student id="s72">
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c0"/>
+    </student>
+    <student id="s73">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c10"/>
+    </student>
+    <student id="s74">
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c0"/>
+    </student>
+    <student id="s75">
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c8"/>
+    </student>
+    <student id="s76">
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c6"/>
+    </student>
+    <student id="s77">
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c8"/>
+    </student>
+    <student id="s78">
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c5"/>
+    </student>
+    <student id="s79">
+      <course id="c4"/>
+      <course id="c7"/>
+      <course id="c3"/>
+    </student>
+    <student id="s80">
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c2"/>
+    </student>
+    <student id="s81">
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c2"/>
+    </student>
+    <student id="s82">
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c5"/>
+    </student>
+    <student id="s83">
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s84">
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c8"/>
+    </student>
+    <student id="s85">
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c3"/>
+    </student>
+    <student id="s86">
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c4"/>
+    </student>
+    <student id="s87">
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c0"/>
+    </student>
+    <student id="s88">
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c9"/>
+    </student>
+    <student id="s89">
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c8"/>
+    </student>
+    <student id="s90">
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c2"/>
+    </student>
+    <student id="s91">
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c10"/>
+    </student>
+    <student id="s92">
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c5"/>
+    </student>
+    <student id="s93">
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s94">
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c7"/>
+    </student>
+    <student id="s95">
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c6"/>
+      <course id="c5"/>
+    </student>
+    <student id="s96">
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c0"/>
+      <course id="c2"/>
+    </student>
+    <student id="s97">
+      <course id="c2"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c3"/>
+    </student>
+    <student id="s98">
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c6"/>
+    </student>
+    <student id="s99">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c8"/>
+    </student>
+    <student id="s100">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c3"/>
+    </student>
+    <student id="s101">
+      <course id="c7"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c3"/>
+    </student>
+    <student id="s102">
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c0"/>
+    </student>
+    <student id="s103">
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c7"/>
+    </student>
+    <student id="s104">
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c5"/>
+    </student>
+    <student id="s105">
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c7"/>
+    </student>
+    <student id="s106">
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c9"/>
+      <course id="c10"/>
+    </student>
+    <student id="s107">
+      <course id="c5"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c4"/>
+    </student>
+    <student id="s108">
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c3"/>
+    </student>
+    <student id="s109">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c9"/>
+    </student>
+    <student id="s110">
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c8"/>
+    </student>
+    <student id="s111">
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c0"/>
+    </student>
+    <student id="s112">
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c6"/>
+    </student>
+    <student id="s113">
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c4"/>
+    </student>
+    <student id="s114">
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s115">
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s116">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c10"/>
+    </student>
+    <student id="s117">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c4"/>
+    </student>
+    <student id="s118">
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c1"/>
+    </student>
+    <student id="s119">
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c9"/>
+    </student>
+    <student id="s120">
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c3"/>
+    </student>
+    <student id="s121">
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s122">
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c5"/>
+      <course id="c6"/>
+    </student>
+    <student id="s123">
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c4"/>
+    </student>
+    <student id="s124">
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c4"/>
+    </student>
+    <student id="s125">
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c8"/>
+    </student>
+    <student id="s126">
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c7"/>
+    </student>
+    <student id="s127">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c6"/>
+    </student>
+    <student id="s128">
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c2"/>
+    </student>
+    <student id="s129">
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c2"/>
+    </student>
+    <student id="s130">
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c1"/>
+      <course id="c6"/>
+    </student>
+    <student id="s131">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c4"/>
+    </student>
+    <student id="s132">
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c1"/>
+    </student>
+    <student id="s133">
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c10"/>
+    </student>
+    <student id="s134">
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c8"/>
+    </student>
+    <student id="s135">
+      <course id="c6"/>
+      <course id="c8"/>
+      <course id="c5"/>
+    </student>
+    <student id="s136">
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c5"/>
+    </student>
+    <student id="s137">
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c1"/>
+    </student>
+    <student id="s138">
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c5"/>
+    </student>
+    <student id="s139">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c1"/>
+    </student>
+    <student id="s140">
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s141">
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s142">
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c7"/>
+    </student>
+    <student id="s143">
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c0"/>
+    </student>
+    <student id="s144">
+      <course id="c6"/>
+      <course id="c8"/>
+      <course id="c2"/>
+    </student>
+    <student id="s145">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c10"/>
+    </student>
+    <student id="s146">
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c9"/>
+    </student>
+    <student id="s147">
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c2"/>
+    </student>
+    <student id="s148">
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s149">
+      <course id="c9"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c6"/>
+    </student>
+    <student id="s150">
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c6"/>
+    </student>
+    <student id="s151">
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c1"/>
+    </student>
+    <student id="s152">
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s153">
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c9"/>
+    </student>
+    <student id="s154">
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c2"/>
+    </student>
+    <student id="s155">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c6"/>
+    </student>
+    <student id="s156">
+      <course id="c10"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c7"/>
+    </student>
+    <student id="s157">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c0"/>
+    </student>
+    <student id="s158">
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s159">
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c6"/>
+    </student>
+    <student id="s160">
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c0"/>
+    </student>
+    <student id="s161">
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c2"/>
+      <course id="c5"/>
+    </student>
+    <student id="s162">
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c9"/>
+    </student>
+    <student id="s163">
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c8"/>
+    </student>
+    <student id="s164">
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c3"/>
+    </student>
+    <student id="s165">
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c5"/>
+    </student>
+    <student id="s166">
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c8"/>
+    </student>
+    <student id="s167">
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c8"/>
+    </student>
+    <student id="s168">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c5"/>
+    </student>
+    <student id="s169">
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c6"/>
+    </student>
+    <student id="s170">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c4"/>
+      <course id="c5"/>
+    </student>
+    <student id="s171">
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c3"/>
+    </student>
+    <student id="s172">
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c4"/>
+    </student>
+    <student id="s173">
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c6"/>
+    </student>
+    <student id="s174">
+      <course id="c4"/>
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c1"/>
+    </student>
+    <student id="s175">
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c2"/>
+    </student>
+    <student id="s176">
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c5"/>
+      <course id="c1"/>
+    </student>
+    <student id="s177">
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c7"/>
+    </student>
+    <student id="s178">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c8"/>
+    </student>
+    <student id="s179">
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c7"/>
+    </student>
+    <student id="s180">
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c3"/>
+    </student>
+    <student id="s181">
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c4"/>
+    </student>
+    <student id="s182">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c4"/>
+    </student>
+    <student id="s183">
+      <course id="c4"/>
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c2"/>
+    </student>
+    <student id="s184">
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c8"/>
+    </student>
+    <student id="s185">
+      <course id="c9"/>
+      <course id="c3"/>
+      <course id="c6"/>
+    </student>
+    <student id="s186">
+      <course id="c6"/>
+      <course id="c2"/>
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c5"/>
+      <course id="c4"/>
+    </student>
+    <student id="s187">
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c1"/>
+    </student>
+    <student id="s188">
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c5"/>
+    </student>
+    <student id="s189">
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c5"/>
+    </student>
+    <student id="s190">
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c6"/>
+    </student>
+    <student id="s191">
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c10"/>
+    </student>
+    <student id="s192">
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c6"/>
+    </student>
+    <student id="s193">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c6"/>
+    </student>
+    <student id="s194">
+      <course id="c0"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c7"/>
+      <course id="c8"/>
+    </student>
+    <student id="s195">
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c2"/>
+    </student>
+    <student id="s196">
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c0"/>
+    </student>
+    <student id="s197">
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s198">
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c3"/>
+    </student>
+    <student id="s199">
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c7"/>
+    </student>
+    <student id="s200">
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c4"/>
+    </student>
+    <student id="s201">
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c5"/>
+    </student>
+    <student id="s202">
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c0"/>
+    </student>
+    <student id="s203">
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c0"/>
+    </student>
+    <student id="s204">
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c2"/>
+    </student>
+    <student id="s205">
+      <course id="c1"/>
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c0"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c5"/>
+    </student>
+    <student id="s206">
+      <course id="c2"/>
+      <course id="c7"/>
+      <course id="c8"/>
+    </student>
+    <student id="s207">
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c6"/>
+    </student>
+    <student id="s208">
+      <course id="c9"/>
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c4"/>
+    </student>
+    <student id="s209">
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c4"/>
+    </student>
+    <student id="s210">
+      <course id="c7"/>
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c5"/>
+      <course id="c1"/>
+      <course id="c4"/>
+    </student>
+    <student id="s211">
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c0"/>
+    </student>
+    <student id="s212">
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c3"/>
+    </student>
+    <student id="s213">
+      <course id="c0"/>
+      <course id="c5"/>
+      <course id="c8"/>
+    </student>
+    <student id="s214">
+      <course id="c7"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c1"/>
+    </student>
+    <student id="s215">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c2"/>
+    </student>
+    <student id="s216">
+      <course id="c5"/>
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c7"/>
+    </student>
+    <student id="s217">
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c4"/>
+    </student>
+    <student id="s218">
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c4"/>
+    </student>
+    <student id="s219">
+      <course id="c2"/>
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c10"/>
+    </student>
+    <student id="s220">
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c5"/>
+    </student>
+    <student id="s221">
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c5"/>
+    </student>
+    <student id="s222">
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c2"/>
+    </student>
+    <student id="s223">
+      <course id="c4"/>
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c8"/>
+    </student>
+    <student id="s224">
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c3"/>
+    </student>
+    <student id="s225">
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c3"/>
+      <course id="c4"/>
+    </student>
+    <student id="s226">
+      <course id="c8"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c6"/>
+    </student>
+    <student id="s227">
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c5"/>
+    </student>
+    <student id="s228">
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c7"/>
+    </student>
+    <student id="s229">
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c2"/>
+    </student>
+    <student id="s230">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c10"/>
+    </student>
+    <student id="s231">
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c10"/>
+    </student>
+    <student id="s232">
+      <course id="c5"/>
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c7"/>
+      <course id="c6"/>
+    </student>
+    <student id="s233">
+      <course id="c3"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c10"/>
+    </student>
+    <student id="s234">
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c3"/>
+      <course id="c8"/>
+    </student>
+    <student id="s235">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c5"/>
+    </student>
+    <student id="s236">
+      <course id="c1"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c3"/>
+    </student>
+    <student id="s237">
+      <course id="c1"/>
+      <course id="c3"/>
+      <course id="c0"/>
+    </student>
+    <student id="s238">
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c2"/>
+    </student>
+    <student id="s239">
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c4"/>
+      <course id="c1"/>
+    </student>
+    <student id="s240">
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s241">
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c1"/>
+    </student>
+    <student id="s242">
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c6"/>
+    </student>
+    <student id="s243">
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c6"/>
+    </student>
+    <student id="s244">
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c7"/>
+      <course id="c0"/>
+    </student>
+    <student id="s245">
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c2"/>
+    </student>
+    <student id="s246">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c6"/>
+    </student>
+    <student id="s247">
+      <course id="c1"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c10"/>
+      <course id="c9"/>
+      <course id="c5"/>
+    </student>
+    <student id="s248">
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c2"/>
+      <course id="c1"/>
+    </student>
+    <student id="s249">
+      <course id="c7"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c8"/>
+    </student>
+    <student id="s250">
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c7"/>
+      <course id="c0"/>
+      <course id="c6"/>
+      <course id="c5"/>
+    </student>
+    <student id="s251">
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c9"/>
+    </student>
+    <student id="s252">
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c6"/>
+    </student>
+    <student id="s253">
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c6"/>
+      <course id="c4"/>
+    </student>
+    <student id="s254">
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c8"/>
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c1"/>
+    </student>
+    <student id="s255">
+      <course id="c2"/>
+      <course id="c5"/>
+      <course id="c3"/>
+      <course id="c1"/>
+      <course id="c10"/>
+    </student>
+    <student id="s256">
+      <course id="c3"/>
+      <course id="c8"/>
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c6"/>
+    </student>
+    <student id="s257">
+      <course id="c9"/>
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c5"/>
+    </student>
+    <student id="s258">
+      <course id="c3"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c4"/>
+      <course id="c8"/>
+    </student>
+    <student id="s259">
+      <course id="c0"/>
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c8"/>
+      <course id="c2"/>
+      <course id="c3"/>
+    </student>
+    <student id="s260">
+      <course id="c3"/>
+      <course id="c6"/>
+      <course id="c7"/>
+    </student>
+    <student id="s261">
+      <course id="c3"/>
+      <course id="c5"/>
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c7"/>
+      <course id="c9"/>
+      <course id="c2"/>
+    </student>
+    <student id="s262">
+      <course id="c3"/>
+      <course id="c2"/>
+      <course id="c7"/>
+    </student>
+    <student id="s263">
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c3"/>
+      <course id="c8"/>
+    </student>
+    <student id="s264">
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c3"/>
+    </student>
+    <student id="s265">
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c1"/>
+      <course id="c0"/>
+      <course id="c7"/>
+    </student>
+    <student id="s266">
+      <course id="c10"/>
+      <course id="c8"/>
+      <course id="c7"/>
+      <course id="c4"/>
+    </student>
+    <student id="s267">
+      <course id="c8"/>
+      <course id="c4"/>
+      <course id="c3"/>
+      <course id="c2"/>
+    </student>
+    <student id="s268">
+      <course id="c6"/>
+      <course id="c10"/>
+      <course id="c2"/>
+      <course id="c4"/>
+      <course id="c1"/>
+    </student>
+    <student id="s269">
+      <course id="c9"/>
+      <course id="c0"/>
+      <course id="c1"/>
+      <course id="c5"/>
+    </student>
+    <student id="s270">
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c5"/>
+      <course id="c7"/>
+      <course id="c4"/>
+      <course id="c3"/>
+    </student>
+    <student id="s271">
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c2"/>
+      <course id="c0"/>
+    </student>
+    <student id="s272">
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c9"/>
+    </student>
+    <student id="s273">
+      <course id="c0"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c1"/>
+    </student>
+    <student id="s274">
+      <course id="c3"/>
+      <course id="c4"/>
+      <course id="c5"/>
+      <course id="c9"/>
+      <course id="c8"/>
+      <course id="c6"/>
+    </student>
+    <student id="s275">
+      <course id="c2"/>
+      <course id="c10"/>
+      <course id="c0"/>
+      <course id="c8"/>
+      <course id="c5"/>
+      <course id="c6"/>
+    </student>
+    <student id="s276">
+      <course id="c7"/>
+      <course id="c6"/>
+      <course id="c9"/>
+      <course id="c1"/>
+      <course id="c10"/>
+    </student>
+    <student id="s277">
+      <course id="c5"/>
+      <course id="c0"/>
+      <course id="c7"/>
+      <course id="c10"/>
+    </student>
+    <student id="s278">
+      <course id="c1"/>
+      <course id="c9"/>
+      <course id="c2"/>
+      <course id="c0"/>
+      <course id="c10"/>
+      <course id="c6"/>
+      <course id="c7"/>
+    </student>
+    <student id="s279">
+      <course id="c8"/>
+      <course id="c10"/>
+      <course id="c1"/>
+      <course id="c5"/>
+      <course id="c4"/>
+      <course id="c6"/>
+      <course id="c7"/>
+    </student>
+  </students>
+</problem>
