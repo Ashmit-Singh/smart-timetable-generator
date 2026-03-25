@@ -1,0 +1,14 @@
+/* Minimal reset — ChronoGrid uses inline styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #04040A;
+  color: #E8E8F0;
+  font-family: 'DM Sans', 'Sora', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
