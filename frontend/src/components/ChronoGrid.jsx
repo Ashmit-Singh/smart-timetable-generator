@@ -7,7 +7,7 @@ import { GraphScene } from "./GraphComponents";
 import { Btn, TimetableGrid, usePlayback, PlaybackPanel, EnergyCurve, WebGLBg } from "./UIComponents";
 import { createSolverWorker, buildConflictGraphLocal } from "./solverWorker";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function ChronoGridApp() {
   const [tab, setTab] = useState("graph");
